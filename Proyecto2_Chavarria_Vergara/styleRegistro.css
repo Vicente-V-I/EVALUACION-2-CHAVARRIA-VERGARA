@@ -1,0 +1,47 @@
+.containerFormReg {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #343a40;
+    border-radius: 8px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .registro-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .cardRegistro {
+    background: #495057;
+    border-radius: 8px;
+}

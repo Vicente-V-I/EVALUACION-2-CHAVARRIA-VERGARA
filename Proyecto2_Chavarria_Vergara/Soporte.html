@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSoporte.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="validacionesHelp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--LINK BOTONES SOCIAL MEDIA FOOTER-->
+</head>
+<body>
+
+  <div class="o-siteheader-section__main">
+    <a href="index.html"><img src="img/logoumbrella3.png"></a>
+  </div>
+
+  <div class="contenav"> <!-- INICIO NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: linear-gradient(#15d108, #063902f6, #031801, #000000); border: azure;">
+      <div class="container-fluid">
+        <div class="contelogo"> <a class="navbar-brand" href="#" style="color: white; margin-left: 30px;"> <img src="img/logoumbrella.png" alt="" width="50px" height="50px">Umbrella Inc. Games</a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" style="margin-left: 215px;">
+            <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Inicio</a>
+            <a class="nav-item dropdown" style="color: white; margin-left: 50px;"> <!-- DROPDOWN -->
+              <a class="nav-link dropdown-toggle" href="#" style="color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu" style="background: linear-gradient(#000000, #031801, #063902f6, #15d108); margin-left: 650px;"> <!-- MENU DEL DROPDOWN CON FONDO COLOR CAFE -->
+                <li><a class="dropdown-item" href="Horror.html" style="color: white;">Horror</a></li>
+                <li><hr class="dropdown-divider"></li> <!--ESTO SIRVE PARA DIVIDIR EL DROPDOWN-->
+                <li><a class="dropdown-item" href="RPG.html" style="color: white;">RPG</a></li>
+                <li><hr class="dropdown-divider"></li> <!--ESTO SIRVE PARA DIVIDIR EL DROPDOWN-->
+                <li><a class="dropdown-item" href="Pelea.html" style="color: white;">Fighting</a></li>
+                <li><hr class="dropdown-divider"></li> <!--ESTO SIRVE PARA DIVIDIR EL DROPDOWN-->
+                <li><a class="dropdown-item" href="HacknSlash.html" style="color: white;">Hack n' Slash</a></li>
+                <li><hr class="dropdown-divider"></li> <!--ESTO SIRVE PARA DIVIDIR EL DROPDOWN-->
+                <li><a class="dropdown-item" href="NovelaVisual.html" style="color: white;">Visual Novel</a></li>
+              </ul>
+            <a class="nav-link" href="Soporte.html" style="color: white; margin-left: 50px;">Soporte</a>
+            <a class="nav-link" href="Registro.html" style="color: white; margin-left: 50px;">Registrarse</a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div> <!-- FIN NAVBAR -->
+
+<!-- INICIO MODAL -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: white;">¿Quieres recibir alertas a tu correo electrónico sobre futuros juegos?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="subscriptionForm">
+          <div class="mb-3">
+            <label for="emailInput" class="col-form-label" style="color: white;">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="emailInput" required>
+            <div class="invalid-feedback" style="color: white;">
+              Por favor ingresa un correo electrónico válido.
+            </div>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="confirmationCheck" required>
+            <label class="form-check-label" for="confirmationCheck" style="color: white;">Confirmo que quiero recibir alertas.</label>
+            <div class="invalid-feedback" style="color: white;">
+              Debes confirmar que quieres recibir alertas.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" style="background-color: #15d108; color: white;">Suscribirse</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color: white;">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- CIERRE MODAL -->
+
+<div class="wrapper"> <!-- INICIO WRAPPER -->
+
+
+<div class="container my-5">
+  <div class="card cardSoporte mx-auto" style="max-width: 600px;">
+    <h5 class="card-header text-center" style="text-shadow: 0 0 5px white; color: white;">Ticket de Soporte</h5>
+    <div class="card-body">
+      <form class="needs-validation" id="ticketForm" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" required>
+        </div>
+        <div class="mb-3">
+          <label for="apodo" class="form-label">Username</label>
+          <input type="text" class="form-control" id="apodo" placeholder="Ingresa tu username" required>
+        </div>
+        <div class="mb-3">
+          <label for="ciudad" class="form-label">Ciudad</label>
+          <input type="text" class="form-control" id="ciudad" placeholder="Ingresa tu ciudad" required>
+        </div>
+        <div class="mb-3">
+          <label for="codigoPostal" class="form-label">Código Postal</label>
+          <input type="text" class="form-control" id="codigoPostal" placeholder="Ingresa tu código postal" required>
+        </div>
+        <div class="mb-3">
+          <label for="consulta" class="form-label">Consulta/Problema</label>
+          <textarea class="form-control" id="consulta" rows="3" placeholder="Describe tu consulta o problema" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck" style="color: white;">
+            He leído y acepto los términos y condiciones.
+          </label>
+          <div class="invalid-feedback">
+            Debes aceptar los términos y condiciones antes de enviar.
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" type="submit" style="background-color: #15d108; color: white;">Enviar Ticket</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div> <!--FIN WRAPPER-->
+
+<!-- Footer -->
+<footer class="custom-footer text-center">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-facebook"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+
+      <!-- Youtube -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-youtube"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Suscríbete a nuestro Newsletter:</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+          <div class="col-auto">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background: azure; color: black;"> Suscribirse
+          </button>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text 
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+        harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+     Section: Text --> 
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercaseF">Plataformas</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-bodyF" href="#!" >PlayStation</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Xbox</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Nintendo</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Steam</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercaseF">Socios</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-bodyF" href="#!" >3DJuegos</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Vandal</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Meristation</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Level Up</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercaseF">Gaming Merchandise</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-bodyF" href="#!" >Razer</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >PC Factory</a>
+            </li>
+            <li>
+              <a class="text-bodyF" href="#!" >Weplay</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercaseF">Anime</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-bodyF" href="#">Crunchyroll</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="index.html">umbrellaincgames.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
